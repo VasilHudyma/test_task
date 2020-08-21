@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:vibration/vibration.dart';
 
 void main() {
   runApp(MyApp());
@@ -49,6 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
         color: _backgroundColor,
       ),
       onTap: () {
+        Vibration.vibrate(duration: 100);
         setState(() {
           _changeBackgroundAndTextColor();
         });
